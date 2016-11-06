@@ -1,41 +1,32 @@
 #:kivy 1.0.9
 
-
-#<Header>:
-#    size: root.width, 80*root.height/root.base_y
-#
-#    Label:
-#        id: state
-#        font_size: 60*root.height/root.base_y
-#        center_y: 445*root.height/root.base_y
-#        center_x: 80*root.height/root.base_y
-#        text: root.state
-
 <Header>:
-    size: 0, root.width
 
     canvas:
         Rectangle:
-            #pos: 0, 400*root.height/root.base_y
-            #size: self.width, 10*root.height/root.base_y
-
-
+            size: root.width, root.height/10
+            pos: 0, root.y - root.height/20
 
     Label:
         id: state
-        #font_size: 60*root.height/root.base_y
-        #center_y: 445*root.height/root.base_y
-        #center_x: 80*root.height/root.base_y
-        pos: root.pos
-        text: "hello"
+        font_size: root.height/2
+        center_y: root.y + root.height/2
+        center_x: root.height*3/4
+        text: root.state
+        #text: str(root.height) + ',' + str(root.height/root.base_h)
+
+<Icon>:
+
 
 <MainWidget>:
+
     header: header
 
     Label:
         id: debug
         font_size: 20
-        text: str(root.width)+'*'+str(root.height)
+        center_x: root.width/4
+        text: str(root.size)+';'+str(root.pos)
 
     Button:
         font_size: 70
@@ -45,7 +36,8 @@
 
     Header:
         id: header
-        pos: 0, 400*root.height/root.base_y
+        size: root.width, 100*root.height/root.base_h
+        pos: 0, root.height - self.size[1]
 
 
 <MenuPage>:
