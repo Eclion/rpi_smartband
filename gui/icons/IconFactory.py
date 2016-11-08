@@ -1,5 +1,5 @@
-from gui.Icons.PowerIcon import PowerIcon
-from gui.Icons.SettingsIcon import SettingsIcon
+from gui.icons.PowerIcon import PowerIcon
+from gui.icons.SettingsIcon import SettingsIcon
 
 
 def from_name(icon_name):

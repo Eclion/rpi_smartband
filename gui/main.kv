@@ -1,22 +1,22 @@
 #:kivy 1.0.9
 
 <Header>:
-
     canvas:
         Rectangle:
             size: root.width, root.height/10
             pos: 0, root.y - root.height/20
 
     Label:
-        id: state
+        text: root.state
+        id: state_label
         font_size: root.height/2
         center_y: root.y + root.height/2
-        center_x: root.height*3/4
-        text: root.state
+        #center_x: self.width*1/2
+        #center_x: root.height*(1/2 + len(self.text)/16)
+        center_x: root.height*(1/2 + len(self.text)/16)
         #text: str(root.height) + ',' + str(root.height/root.base_h)
 
-<Icon>:
-
+<Page>
 
 <MainWidget>:
 
@@ -36,12 +36,7 @@
 
     Header:
         id: header
+        state: root.state
         size: root.width, 100*root.height/root.base_h
         pos: 0, root.height - self.size[1]
 
-
-<MenuPage>:
-    canvas:
-        Rectangle:
-            pos: self.center_x - 5, 0
-            size: 10, self.height

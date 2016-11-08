@@ -1,1 +1,5 @@
-# Created by .ignore support plugin (hsz.mobi)
+.idea/
+concepts/
+gui/icons/__pycache__/
+gui/__pycache__/
+rpi_smartband.iml
